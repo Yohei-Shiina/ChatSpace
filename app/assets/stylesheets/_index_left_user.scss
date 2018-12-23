@@ -4,10 +4,6 @@
   width: 21%;
   position: relative;
   float: left;
-  
-  .fa-cog:before {
-  content: "\f013";
-  }
 }
 
 /*ユーザー（上の）ボックス*/
@@ -48,7 +44,6 @@
         color: #fff;
         position: relative;
         right: 0;
-        float: right;
         .fa fa-edit{
           color: #fff;
         }
