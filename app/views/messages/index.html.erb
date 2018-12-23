@@ -9,81 +9,62 @@
     
     <!--左上-->
     <div class="leftbox">
-      <div class="user">
-        <div class="user__content">
-          <div class="user__content-name">Yohei</div>
-          <div class="user__content-newgroup"></div>
-          <a href="#">□</a>
-          <div class="user__content-edituser"></div>
-          <a href="#">□</a>
-          
-          </div>
+      <div class="userside">
+        <div class="content">
+          <div class="content__name">Yohei</div>
+          <a class="content__newgroup" href="#">
+            <i class="fa fa-edit"></i>
+          </a>
+          <a class="content__edituser" href="#">
+            <i class="fa fa-cog"></i> 
+          </a>
+        </div>
       </div>
       
       <!--左下グループ-->
       <div class="group">
-        
-        <a href="#">
-          <div class="group__list">
-            <div class="group__list-groupName">参加グループ名</div>
-            <div class="group__list-text">最後の発言</div>
-          </div>
-          
-          <div class="group__list">
-            <div class="group__list-groupName">参加グループ名</div>
-            <div class="group__list-text">最後の発言</div>
-          </div>
-          
-          <div class="group__list">
-            <div class="group__list-groupName">参加グループ名</div>
-            <div class="group__list-text">最後の発言</div>
-            
-            
-          </div>
-          
-        </a>
+       <!--部分テンプレート-->
+       <!--controllerで@変数をeach文で回してpartialのlocals{}内で使用する-->
+       <%= render partial: "left_box_group" %>
       </div>
     </div>
     
     <!--右上-->
     <div class="rightbox">
-      <div class="rightbox__header">
-        <div class="rightbox__header-group">
-          <div class="rightbox__header-group-name">グループ名</div>
-          <a href="#" class="rightbox__header-group-edit-btn">edit</a>
+      <div class="header">
+        <div class="header__group">
+          <div class="header__group-name">グループ名</div>
+          <a href="#" class="header__group-edit">edit</a>
         </div>
         
-        <div class="rightbox__header-member">
+        <div class="header__member">
           Member:
+          <!--メンバー名取得-->
           <i>Yohei</i>
         </div>
       </div>
       
       <!--チャットエリア-->
-      <div class="rightbox__body" >
-        <div class="rightbox__body-content">
-          <div class="rightbox__body-content-name">Yohei</div>
-          <div class="rightbox__body-content-time">2018/12/19 12:50:49</div>
-          <div class="rightbox__body-content-text">みんな元気今何してるのーーー？</div>
-        </div>
-        
-        <div class="rightbox__body-content">
-          <div class="rightbox__body-content-name">Yohei</div>
-          <div class="rightbox__body-content-time">2018/12/19 12:50:49</div>
-          <div class="rightbox__body-content-text">みんな元気今何してるのーーー？</div>
-        </div>
+      <div class="body" >
+        <!--部分テンプレート-->
+        <!--controllerで@変数をeach文で回してpartialのlocals{}内で使用する-->
+        <%= render partial: "right_box_message" %>
       </div>
       
       <!--テキスト入力-->
-      <div class="rightbox__footer">
-        <form class="rightbox__footer-form" action="アクション" method="post" >
-          <input type="text" name="text" placeholder="type a message" class="rightbox__footer-form-text"/>
-          <input type="submit" value="Send" class="rightbox__footer-form-send"/>
+      <div class="footer">
+        <form class="footer__form" action="/#/#" method="post" >
+          <input type="text" name="text" placeholder="type a message" class="footer__form-text"/>
+          
+          <label class="chat-file">
+            <input class="image" type="file" name="image">
+              <i class="fa fa-image"></i>
+          </label>
+          
+          <input type="submit" value="Send" class="footer__form-send"/>
         </form>
       </div>
-      
     </div>
   </div>
-  
 </body>
 </html>

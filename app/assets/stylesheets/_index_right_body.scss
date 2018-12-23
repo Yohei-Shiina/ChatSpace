@@ -1,0 +1,23 @@
+.body{
+  
+  height: 73%;
+  width: 100%;
+  overflow: scroll;
+  
+  &__content{
+    padding: 36px 0 10px 40px;
+    
+    &-name{
+      float: left;
+    }
+    &-time{
+      padding-left: 50px;
+      color: grey;
+      font-size: 13px;
+    }
+    &-text{
+      padding-top: 10px;
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.footer{
+  height: 12%;
+  width: 100%;
+  background-color: #B8C3C7;
+  
+  &__form{
+    position: relative;
+    top: 20px;
+    
+    &-text{
+      height: 50px;  
+      width: 860px;
+      margin-left: 40px;
+      padding-left: 20px;
+    }
+    
+    .chat-file{
+      height: 39px;
+      width: 20px;
+      margin-top: 20px;
+      margin-right: 200px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: solid lack;
+      
+      .image{
+        
+      display: none;
+        
+        .fa{
+          
+        }
+      }
+    }
+    
+    &-send{
+      background-color: #38AEF0;
+      border: none;
+      height: 50px;
+      width: 100px;
+      margin-right: 40px;
+      float: right;
+      color: white;
+    }
+  }
+}

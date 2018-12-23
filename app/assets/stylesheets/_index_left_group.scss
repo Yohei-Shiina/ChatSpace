@@ -1,0 +1,25 @@
+/*左下グループ*/
+.group{
+  background-color: #253141;
+  height: 85%;
+  width: 100%;
+  /*グループのリスト*/
+  .link{
+    border: solid white;
+    display: block;
+    &__content{
+      padding: 20px;
+      color: #eee;
+      text-decoration: none;
+      &-name{
+        margin: 0;
+        padding: 0;
+        font-size: 13px;
+        list-style: none;
+      }
+      &-text{
+        font-size: 7px;
+      }
+    }
+  }
+}
