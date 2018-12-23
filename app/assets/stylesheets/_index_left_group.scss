@@ -2,13 +2,13 @@
 .group{
   background-color: #253141;
   height: 85%;
+  position: relative;
   width: 100%;
   /*グループのリスト*/
   .link{
-    border: solid white;
     display: block;
     &__content{
-      padding: 20px;
+      padding: 10%;
       color: #eee;
       text-decoration: none;
       &-name{

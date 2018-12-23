@@ -7,17 +7,20 @@
 <body>
   <div class="box">
     
-    <!--左上-->
-    <div class="leftbox">
-      <div class="userside">
+    <!--左-->
+    <div class="left_box">
+      <!--左上-->
+      <div class="user_side">
         <div class="content">
           <div class="content__name">Yohei</div>
-          <a class="content__newgroup" href="#">
-            <i class="fa fa-edit"></i>
-          </a>
-          <a class="content__edituser" href="#">
-            <i class="fa fa-cog"></i> 
-          </a>
+          <div class="content__option">
+            <a class="content__option-group" href="#">
+          <i class="fa fa-edit"></i>
+        </a>
+            <a class="content__option-edit" href="#">
+          <i class="fa fa-cog"></i> 
+        </a>
+          </div>
         </div>
       </div>
       
@@ -30,7 +33,7 @@
     </div>
     
     <!--右上-->
-    <div class="rightbox">
+    <div class="right_box">
       <div class="header">
         <div class="header__group">
           <div class="header__group-name">グループ名</div>
@@ -58,7 +61,7 @@
           
           <label class="chat-file">
             <input class="image" type="file" name="image">
-              <i class="fa fa-image"></i>
+              <div class="fa fa-image"></div>
           </label>
           
           <input type="submit" value="Send" class="footer__form-send"/>

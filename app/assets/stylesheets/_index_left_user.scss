@@ -1,17 +1,19 @@
 /*左側のボックス*/
-.leftbox{
+.left_box{
   height: 100%;
   width: 21%;
+  position: relative;
   float: left;
   
   .fa-cog:before {
   content: "\f013";
-}
+  }
 }
 
 /*ユーザー（上の）ボックス*/
-.userside {
+.user_side {
   height: 15%;
+  width: 100%;
   position: relative;
   color: white;
   background-color: #090c10;
@@ -19,35 +21,48 @@
 
 /*ユーザーコンテンツ*/
   .content {
-    height: 50px;
     width: 100%;
-    line-height: 50px;
     position: relative;
-    top: 35px;
+    top: 35%;
+    
     
     /*名前*/
     &__name {
       display: inline-block;
-      padding: 0 10px;
+      padding: 0 7%;
       font-weight: bold;
       font-size: 20px;
+          
+
     }
+    
+    &__option {
+      float: right;
+      text-decoration: none;
+      margin-right: 5%;
+      margin-top: 1%;
+    
     /*新規グループ*/
-    &__newgroup{
-      display: inline-block;
-      position: relative;
-      margin-left: 90px;
-      color: #fff;
-      .fa fa-edit{
+      &-group{
+        display: inline-block;
         color: #fff;
+        position: relative;
+        right: 0;
+        float: right;
+        .fa fa-edit{
+          color: #fff;
+        }
       }
-    }
-    /*ユーザー編集*/
-    &__edituser{
-      display: inline-block;
-      color: #fff;
-      .fa fa-cog{
+      /*ユーザー編集*/
+      &-edit{
+        display: inline-block;
         color: #fff;
+        right: 0;
+            
+  
+        .fa fa-cog{
+          color: #fff;
+        }
       }
     }
   }

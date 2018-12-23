@@ -1,8 +1,9 @@
 
-.rightbox{
+.right_box{
   height: 100%;
   width: 79%;
   border: solid #eee;
+  position: relative;
   float: left;
 }
 
@@ -11,17 +12,17 @@
   width: 100%;
   border-bottom: solid #eee;
   &__group{
-    margin: 0 40px;
+    margin: 0 3%;
     &-name{
       font-size: 25px;
       color: #333;
-      margin: 25px 0 15px;
+      margin: 2% 0 2%;
       display: inline-block;
     }
     &-edit{
       float: right;
-      padding: 0 20px;
-      margin-top: 28px;
+      padding: 0 2%;
+      margin-top: 3%;
       line-height: 40px;
       border: solid #38AEF0;
       text-decoration: none;
@@ -33,6 +34,6 @@
   &__member{
     font-size: 12px;
     color: #999;
-    margin: 0 40px;
+    margin: 0 4%;
   }
 }

@@ -5,32 +5,27 @@
   
   &__form{
     position: relative;
-    top: 20px;
+    top: 25%;
     
     &-text{
       height: 50px;  
-      width: 860px;
-      margin-left: 40px;
-      padding-left: 20px;
+      width: 80%;
+      margin-left: 4%;
+      padding-left: 2%;
     }
     
     .chat-file{
-      height: 39px;
-      width: 20px;
-      margin-top: 20px;
-      margin-right: 200px;
+      height: 40%;
+      width: 2%;
+      margin-top: 1.5%;
+      margin-right: 20%;
       position: absolute;
       top: 0;
       right: 0;
-      border: solid lack;
       
       .image{
+        display: none;
         
-      display: none;
-        
-        .fa{
-          
-        }
       }
     }
     
@@ -39,8 +34,7 @@
       border: none;
       height: 50px;
       width: 100px;
-      margin-right: 40px;
-      float: right;
+      margin-left: 3% ;
       color: white;
     }
   }
