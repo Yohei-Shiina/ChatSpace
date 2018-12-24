@@ -1,0 +1,64 @@
+/*左側のボックス*/
+.left_box{
+  height: 100%;
+  width: 21%;
+  position: relative;
+  float: left;
+}
+
+/*ユーザー（上の）ボックス*/
+.user_side {
+  height: 15%;
+  width: 100%;
+  position: relative;
+  color: white;
+  background-color: #090c10;
+
+
+/*ユーザーコンテンツ*/
+  .content {
+    width: 100%;
+    position: relative;
+    top: 35%;
+    
+    
+    /*名前*/
+    &__name {
+      display: inline-block;
+      padding: 0 7%;
+      font-weight: bold;
+      font-size: 20px;
+          
+
+    }
+    
+    &__option {
+      float: right;
+      text-decoration: none;
+      margin-right: 5%;
+      margin-top: 1%;
+    
+    /*新規グループ*/
+      &-group{
+        display: inline-block;
+        color: #fff;
+        position: relative;
+        right: 0;
+        .fa fa-edit{
+          color: #fff;
+        }
+      }
+      /*ユーザー編集*/
+      &-edit{
+        display: inline-block;
+        color: #fff;
+        right: 0;
+            
+  
+        .fa fa-cog{
+          color: #fff;
+        }
+      }
+    }
+  }
+}
