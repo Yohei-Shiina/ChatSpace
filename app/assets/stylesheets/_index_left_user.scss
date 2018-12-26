@@ -39,25 +39,16 @@
       margin-top: 1%;
     
     /*新規グループ*/
-      &-group{
+      &--edit-white{
         display: inline-block;
         color: #fff;
-        position: relative;
         right: 0;
-        .fa fa-edit{
-          color: #fff;
-        }
       }
       /*ユーザー編集*/
-      &-edit{
+      &--cog-white{
         display: inline-block;
         color: #fff;
         right: 0;
-            
-  
-        .fa fa-cog{
-          color: #fff;
-        }
       }
     }
   }
