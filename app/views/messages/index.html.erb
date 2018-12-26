@@ -14,10 +14,11 @@
         <div class="content">
           <div class="content__name"><%= current_user.name%></div>
           <div class="content__option">
-            <a class="content__option-group" href="#">
+            <%= link_to "#", :class => "content__option--edit-white" do %>
               <i class="fa fa-edit"></i>
-            </a>
-            <%= link_to edit_user_path(current_user) do %>
+            <% end %>
+            
+            <%= link_to edit_user_path(current_user),  :class => "content__option--cog-white" do %>
               <i class="fa fa-cog"></i>
             <% end %>
           </div>
