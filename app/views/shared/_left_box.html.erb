@@ -19,12 +19,12 @@
       <div class="group">
         <!--部分テンプレート-->
         <% current_user.groups.each do |group| %>
-        <%= link_to group_messages_path(group), :class => "link" do %>
-          <div class="link__content" >
-            <div class="link__content-name"><%= group.name %></div>
-            <div class="link__content-text">No message yet</div>
-          </div>
-        <% end %>
+          <%= link_to group_messages_path(group), :class => "link" do %>
+            <div class="link__content" >
+              <div class="link__content-name"><%= group.name %></div>
+              <div class="link__content-text">No message yet</div>
+            </div>
+          <% end %>
         <% end %>
        <!--controllerで@変数をeach文で回してpartialのlocals{}内で使用する-->
       </div>
