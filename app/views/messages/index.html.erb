@@ -1,44 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title></title>
-</head>
-<body>
   <div class="box">
-    
     <!--左-->
-    <div class="left_box">
-      <!--左上-->
-      <div class="user_side">
-        <div class="content">
-          <div class="content__name"><%= current_user.name%></div>
-          <div class="content__option">
-            <%= link_to "#", :class => "content__option--edit-white" do %>
-              <i class="fa fa-edit"></i>
-            <% end %>
-            
-            <%= link_to edit_user_path(current_user),  :class => "content__option--cog-white" do %>
-              <i class="fa fa-cog"></i>
-            <% end %>
-          </div>
-        </div>
-      </div>
-      
-      <!--左下グループ-->
-      <div class="group">
-       <!--部分テンプレート-->
-       <!--controllerで@変数をeach文で回してpartialのlocals{}内で使用する-->
-       <%= render partial: "left_box_group" %>
-      </div>
-    </div>
+    <%= render partial: "shared/left_box" %>
     
-    <!--右上-->
     <div class="right_box">
       <div class="header">
         <div class="header__group">
           <div class="header__group-name">グループ名</div>
-          <a href="#" class="header__group-edit">edit</a>
+          <%= link_to edit_group_path(current_user), :class => "header__group-edit" do %>
+            <p>edit</p>
+          <% end %>
         </div>
         
         <div class="header__member">
@@ -69,6 +39,5 @@
         </form>
       </div>
     </div>
+    
   </div>
-</body>
-</html>
