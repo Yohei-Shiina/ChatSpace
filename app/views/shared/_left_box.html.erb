@@ -1,0 +1,31 @@
+     <div class="left_box">
+      <!--左上-->
+      <div class="user_side">
+        <div class="content">
+          <div class="content__name"><%= current_user.name%></div>
+          <div class="content__option">
+            <%= link_to new_group_path, :class => "content__option--edit-white" do %>
+              <i class="fa fa-edit"></i>
+            <% end %>
+            
+            <%= link_to edit_user_path(current_user),  :class => "content__option--cog-white" do %>
+              <i class="fa fa-cog"></i>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      
+      <!--左下グループ-->
+      <div class="group">
+        <!--部分テンプレート-->
+        <% current_user.groups.each do |group| %>
+          <%= link_to group_messages_path(group), :class => "link" do %>
+            <div class="link__content" >
+              <div class="link__content-name"><%= group.name %></div>
+              <div class="link__content-text">No message yet</div>
+            </div>
+          <% end %>
+        <% end %>
+       <!--controllerで@変数をeach文で回してpartialのlocals{}内で使用する-->
+      </div>
+    </div>
