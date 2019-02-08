@@ -6,7 +6,7 @@
       <div class="header">
         <div class="header__group">
           <div class="header__group-name">グループ名</div>
-          <%= link_to "#", :class => "header__group-edit" do %>
+          <%= link_to edit_group_path(@group), :class => "header__group-edit" do %>
             <p>edit</p>
           <% end %>
         </div>
@@ -27,17 +27,18 @@
       
       <!--テキスト入力-->
       <div class="footer">
-        <form class="footer__form" action="/#/#" method="post" >
-          <input type="text" name="text" placeholder="type a message" class="footer__form-text"/>
-          
-          <label class="chat-file">
-            <input class="image" type="file" name="image">
-              <div class="fa fa-image"></div>
-          </label>
-          
-          <input type="submit" value="Send" class="footer__form-send"/>
-        </form>
+        <div class="footer__form">
+        <%= form_for [@group, @message] do |f| %>
+            <%= f.text_field :body, class: "footer__form-text", placeholder: "type a message" %>
+            
+            <%= f.label :image, class: "footer__form-chatfile" do %>
+              <%= f.file_field :image, class: "footer__form-chatfile-image" %>
+              <%= fa_icon "image" %>
+            <% end %>
+            <%= f.submit :Send, class: "footer__form-send" %>
+        <% end %>
+        </div>
+        
       </div>
     </div>
-    
   </div>
