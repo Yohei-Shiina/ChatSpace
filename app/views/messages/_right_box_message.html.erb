@@ -1,5 +1,8 @@
-<div class="body__content">
-  <div class="body__content-name">Yohei</div>
-  <div class="body__content-time">2018/12/19 12:50:49</div>
-  <div class="body__content-text">テキストテキストテキストテキストテキスト</div>
-</div>
+<% messages.each do |message| %> 
+  <div class="body__content">
+    <div class="body__content-name"><%= message.user.name %></div>
+    <div class="body__content-time"><%= message.created_at.strftime("%y年%m/%d/%H時%M分")%></div>
+    <div class="body__content-text"><%= message.body %></div>
+    <%= image_tag message.image, class: 'body__content-image' if message.image.present? %>
+  </div>
+<% end %>

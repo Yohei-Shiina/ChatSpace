@@ -22,7 +22,7 @@
       <div class="body" >
         <!--部分テンプレート-->
         <!--controllerで@変数をeach文で回してpartialのlocals{}内で使用する-->
-        <%= render partial: "right_box_message" %>
+        <%= render partial: "right_box_message", locals: {messages: @messages} %>
       </div>
       
       <!--テキスト入力-->
