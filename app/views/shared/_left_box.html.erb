@@ -22,7 +22,7 @@
           <%= link_to group_messages_path(group), :class => "link" do %>
             <div class="link__content" >
               <div class="link__content-name"><%= group.name %></div>
-              <div class="link__content-text">No message yet</div>
+              <div class="link__content-text"><%= group.show_last_message %></div>
             </div>
           <% end %>
         <% end %>
