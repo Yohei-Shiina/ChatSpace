@@ -7,10 +7,10 @@
   /*グループのリスト*/
   .link{
     display: block;
+    text-decoration: none;
     &__content{
       padding: 10%;
       color: #eee;
-      text-decoration: none;
       &-name{
         margin: 0;
         padding: 0;
