@@ -14,17 +14,19 @@
       padding-left: 2%;
     }
     
-    .chat-file{
+    &-chatfile{
       height: 40%;
       width: 2%;
       margin-top: 1.5%;
-      margin-right: 20%;
-      position: absolute;
+      position: relative;
       top: 0;
-      right: 0;
+      right: 50px;
       
-      .image{
+      
+      &-image{
         display: none;
+        border: solid 1px black;
+        
         
       }
     }
@@ -36,6 +38,7 @@
       width: 100px;
       margin-left: 3% ;
       color: white;
+      
     }
   }
 }
