@@ -44,6 +44,7 @@ group :development, :test do
   gem 'faker'
   gem 'carrierwave'
   gem 'mini_magick'
+  gem 'capybara'
   
 end
 
