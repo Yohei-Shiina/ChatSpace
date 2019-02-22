@@ -18,6 +18,7 @@ $(function(){
     var imageFile = $(".footer__form-chatfile-image");
     var sendBtn = $(".footer__form-send");
     
+    
     $.ajax({
       url: href,
       type: 'POST',
@@ -31,6 +32,12 @@ $(function(){
       console.log(data);
       var html = buildHTML(data);
       $('.body').append(html);
+      $('.body').animate({scrollTop: $('.body')[0].scrollHeight}, 'fast');
+      console.log($('.body'));
+      var countA = $('.body').children().length;
+      console.log(countA);
+      
+      
       textField.val("");
       imageFile.val("");
       sendBtn.removeAttr("disabled");
