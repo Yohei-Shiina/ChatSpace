@@ -17,6 +17,7 @@ $(function(){
     var textField = $('.footer__form-text');
     var imageFile = $(".footer__form-chatfile-image");
     var sendBtn = $(".footer__form-send");
+    var resetForm = textField.val("") & imageFile.val("");
     
     
     $.ajax({
@@ -33,19 +34,12 @@ $(function(){
       var html = buildHTML(data);
       $('.body').append(html);
       $('.body').animate({scrollTop: $('.body')[0].scrollHeight}, 'fast');
-      console.log($('.body'));
-      var countA = $('.body').children().length;
-      console.log(countA);
-      
-      
-      textField.val("");
-      imageFile.val("");
+      resetForm;
       sendBtn.removeAttr("disabled");
     })
     .fail(function(data){
       alert('error');
-      textField.val("");
-      imageFile.val("");
+      resetForm;
       sendBtn.removeAttr("disabled");
     });
   });
