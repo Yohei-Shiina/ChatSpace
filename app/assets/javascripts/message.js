@@ -1,15 +1,18 @@
-function buildHTML(message){
+$(function(){
+  var messages = $('.body');
+  var path = window.location.pathname;
+  
+  function buildHTML(message){
   var bodyImage = message.image ? `<img class="body__content-image" src="${message.image}">` : "" ;
-  var html = `<div class="body__content">
-                <div class="body__content-name">${ message.name }</div>
+  var html = `<div class="body__content", data-id=${ message.id }>
+                <div class="body__content-name">${ message.user_name }</div>
                 <div class="body__content-time">${ message.time }</div>
                 <div class="body__content-text">${ message.body }</div>
                 ${bodyImage}
               </div>`;
   return html;
-}
+  }
   
-$(function(){
   $('.new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -30,7 +33,6 @@ $(function(){
     })
     
     .done (function(data){
-      console.log(data);
       var html = buildHTML(data);
       $('.body').append(html);
       $('.body').animate({scrollTop: $('.body')[0].scrollHeight}, 'fast');
@@ -42,5 +44,27 @@ $(function(){
       resetForm;
       sendBtn.removeAttr("disabled");
     });
+  });
+  
+  if(path.match('/messages') && $('.body__content').length){
+    var timer = setInterval(function(){
+      var lastMessageId = messages.children().last().data('id');
+      $.ajax({
+        type:     'GET',
+        url:       window.location.href,
+        data: { last_message_id: lastMessageId },
+        dataType: 'json'
+      })
+      .done(function(data){
+        $.each(data, function(i, message){
+          var html = buildHTML(message);
+          messages.append(html);
+        });
+      });
+    }, 3000);
+  }
+  
+  $(this).on('turbolinks:click', function() {
+    clearInterval(timer);
   });
 });
