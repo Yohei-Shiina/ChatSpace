@@ -51,7 +51,7 @@ $(function(){
     $(this).parent().remove(); //クリックされた要素の親要素を削除
   });
   
-  $(".user-search-remove").on("click", function () { //削除がクリックされたら
+  $(document).on("click",'.user-search-remove', function () { //削除がクリックされたら
       $(this).parent().remove(); //クリックされた要素の親要素を削除
   });
 })
