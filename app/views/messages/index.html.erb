@@ -20,9 +20,9 @@
       
       <!--チャットエリア-->
       <div class="body" >
-        <!--部分テンプレート-->
-        <!--controllerで@変数をeach文で回してpartialのlocals{}内で使用する-->
-        <%= render partial: "right_box_message", locals: {messages: @messages} %>
+        <% if @messages.last != nil %>
+          <%= render partial: "right_box_message", locals: {messages: @messages} %>
+        <% end %>
       </div>
       
       <!--テキスト入力-->

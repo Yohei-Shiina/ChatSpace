@@ -1,5 +1,5 @@
-<% messages.each do |message| %> 
-  <div class="body__content">
+<% messages.each do |message| %>
+  <div class="body__content", data-id= <%= message.id %>>
     <div class="body__content-name"><%= message.user.name %></div>
     <div class="body__content-time"><%= message.created_at.strftime("%y年%m月/%d/%H時%M分")%></div>
     <div class="body__content-text"><%= message.body %></div>
