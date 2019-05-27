@@ -42,8 +42,6 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'factory_girl_rails', '~> 4.4.1'
   gem 'faker'
-  gem 'carrierwave'
-  gem 'mini_magick'
   gem 'capybara'
   
 end
