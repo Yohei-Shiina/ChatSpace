@@ -2,7 +2,7 @@
 このアプリでは、グループを作成し、メンバーとチャットをすることができます<br>
 
 <strong>こちらのリンクからアプリにアクセスできます。</strong><br>
-URL: http://grower4u.herokuapp.com/ <br>
+URL: https://chat-space-w-heroku.herokuapp.com/ <br>
 
 <img width="1440" alt="スクリーンショット 2019-05-31 13 57 58" src="https://user-images.githubusercontent.com/35527421/58682586-216e4880-83ac-11e9-8b8f-993a46b6d8a6.png">
 
