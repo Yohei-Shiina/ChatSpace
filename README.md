@@ -1,54 +1,27 @@
-# README
+>これは私が初めてRuby/Railsを利用して自作したアプリになります。<br>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# ChatSpace
+このアプリでは、グループを作成し、メンバーとチャットをすることができます<br>
 
-Things you may want to cover:
+<strong>こちらのリンクからアプリにアクセスできます。</strong><br>
+URL: http://grower4u.herokuapp.com/ <br>
 
-* Ruby version
-ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+<img width="1440" alt="スクリーンショット 2019-05-31 13 57 58" src="https://user-images.githubusercontent.com/35527421/58682586-216e4880-83ac-11e9-8b8f-993a46b6d8a6.png">
 
-* Database structure
+# アプリ作成のために利用したもの
+- Ruby
+- Ruby on Rails
+- HTML
+- CSS
+- JavaScript
+### サーバー
+- Heroku
 
-## groupsテーブル
-|Column |Type |Options |
-|-----|---|-----|
-|name|string|null: false, index: ture, unique: true|
+# バージョン 2019/5/24現在
+使用言語：　ruby 2.3.1p112<br>
+フレームワーク: rails (5.0.7.2)<br>
 
-### Association
-- has_many :users, through: :group_users
-- has_many :group_users
-- has_many :messages
+# 最後に
+最後まで目を通していただきありがとうございました。
 
-## usersテーブル
-
-|Column|Type|Options|
-|-----|---|-----|
-|name |string|null: false, index: true, unique: ture|
-
-### Association
-- has_many :groups, through: :group_users
-- has_many :group_users
-- has_many :messages
-
-## messagesテーブル
-|Column|Type|Options|
-|-----|---|-----|
-|body|text|null: false|
-|image|string|-----|
-|group |references|null: false, foreign_key: true|
-|user |references|null: false, foreign_key: true|
-
-### Association
-- belongs_to :group
-- belongs_to :user
-
-## (中間)group_userテーブル
-|Column|Type|Options|
-|-----|---|-----|
-|group|references|null: false, foreign_key: true|
-|user|references|null: false, foreign_key: true|
-
-### Association
-- belongs_to :group
-- belongs_to :user
+もし何かあれば、気軽にプIssueを立てていただけれればと思います。<br>
