@@ -1,12 +1,13 @@
 # アプリ概要
 アプリ名：ChatSpace
 
-このアプリでは、グループを作成し、メンバーとチャットをすることができます。<br>
-
-<strong>こちらのリンクからアプリにアクセスできます。</strong><br>
-URL: https://chat-space-w-heroku.herokuapp.com/ <br>
-
+グループを作成し、メンバーと会話ができるチャットアプリです。<br>
 <img width="1440" alt="スクリーンショット 2019-05-31 13 57 58" src="https://user-images.githubusercontent.com/35527421/58682586-216e4880-83ac-11e9-8b8f-993a46b6d8a6.png">
+
+
+<strong>このリンクからアプリにアクセスできます。</strong><br>
+URL: https://chat-space-w-heroku.herokuapp.com/ <br>
+<strong>初期値のまま</strong>テストユーザーとして<strong>ログイン</strong>ができます。<br>
 
 # アプリ機能一覧
 ## グループ
